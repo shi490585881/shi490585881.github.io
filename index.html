@@ -1,12 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smilehub</title>
-</head>
-<body>
-  <h1>Smilehub</h1>
-  <p>我的个人网站正在建设中。</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Smilehub — 平凡而普通的热血人生。摄影、文章与生活记录。"
+    />
+    <title>Smilehub</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="回到首页">Smilehub</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#photography">Photography</a>
+        <a href="#journal">Journal</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Personal archive / 2026</p>
+          <h1>平凡而普通的<br />热血人生。</h1>
+        </div>
+        <div class="hero-mark reveal" aria-hidden="true">
+          <span>日々</span>
+          <span class="hero-mark-line"></span>
+          <span>記録</span>
+        </div>
+        <a class="scroll-cue" href="#photography">
+          <span>Scroll</span>
+          <span class="scroll-line"></span>
+        </a>
+      </section>
+
+      <section class="section photography" id="photography">
+        <div class="section-heading reveal">
+          <p class="section-number">01</p>
+          <h2>Photography</h2>
+          <p>光、空气与路过的片刻。</p>
+        </div>
+
+        <div class="photo-grid">
+          <article class="photo-card photo-card--large reveal">
+            <div class="photo-placeholder tone-a">
+              <span>你的摄影作品 01</span>
+            </div>
+            <div class="photo-meta">
+              <p>日常 / Daily life</p>
+              <p>2026</p>
+            </div>
+          </article>
+
+          <article class="photo-card reveal">
+            <div class="photo-placeholder tone-b">
+              <span>你的摄影作品 02</span>
+            </div>
+            <div class="photo-meta">
+              <p>途中 / On the road</p>
+              <p>2026</p>
+            </div>
+          </article>
+
+          <article class="photo-card photo-card--portrait reveal">
+            <div class="photo-placeholder tone-c">
+              <span>你的摄影作品 03</span>
+            </div>
+            <div class="photo-meta">
+              <p>微光 / Soft light</p>
+              <p>2026</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="text-link reveal" href="#" aria-label="查看全部摄影作品">
+          View all photographs
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section class="section journal" id="journal">
+        <div class="section-heading reveal">
+          <p class="section-number">02</p>
+          <h2>Journal</h2>
+          <p>文章、片段与正在发生的事。</p>
+        </div>
+
+        <div class="journal-list">
+          <a class="journal-item reveal" href="#">
+            <time datetime="2026-07-01">2026.07.01</time>
+            <h3>第一篇文章会出现在这里</h3>
+            <p>Notes</p>
+          </a>
+          <a class="journal-item reveal" href="#">
+            <time datetime="2026-06-01">2026.06.01</time>
+            <h3>把普通的日子认真记录下来</h3>
+            <p>Diary</p>
+          </a>
+          <a class="journal-item reveal" href="#">
+            <time datetime="2026-05-01">2026.05.01</time>
+            <h3>关于一段影像和一次远行</h3>
+            <p>Story</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <p class="section-number reveal">03</p>
+        <div class="about-copy reveal">
+          <p class="about-name">Smilehub</p>
+          <h2>
+            这是一个关于摄影、文字与生活的个人档案。
+            <br />
+            我在这里保存那些值得再次看见的瞬间。
+          </h2>
+        </div>
+        <div class="about-links reveal">
+          <p>Elsewhere</p>
+          <a href="#" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="#" target="_blank" rel="noreferrer">Douyin ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Smilehub</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
 </html>
