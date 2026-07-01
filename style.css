@@ -929,3 +929,358 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Journal / longform reading */
+
+.reading-progress {
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+}
+
+.reading-progress span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+
+.article-masthead {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 150px var(--side) 46px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-kicker,
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--quiet);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.article-kicker p,
+.article-meta p {
+  margin: 0;
+}
+
+.article-title {
+  width: min(980px, 100%);
+  align-self: center;
+  margin: 8vh auto;
+}
+
+.article-eyebrow {
+  margin: 0 0 34px;
+  color: var(--quiet);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.article-title h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(68px, 10.5vw, 158px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+  text-align: center;
+}
+
+.mobile-title-break {
+  display: none;
+}
+
+.article-deck {
+  margin: 48px auto 0;
+  color: #4b4b49;
+  font-family: var(--serif);
+  font-size: clamp(13px, 1.15vw, 16px);
+  letter-spacing: 0.12em;
+  line-height: 2;
+  text-align: center;
+}
+
+.article-begin {
+  position: absolute;
+  right: auto;
+  bottom: 44px;
+  left: 50%;
+  color: var(--quiet);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}
+
+.manuscript {
+  position: relative;
+  padding: clamp(120px, 17vw, 250px) var(--side);
+}
+
+.manuscript-note {
+  position: sticky;
+  top: 48%;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #aaa9a5;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.manuscript-note span:first-child {
+  transform: translateX(calc(-1 * var(--side))) rotate(-90deg);
+}
+
+.manuscript-note span:last-child {
+  transform: translateX(var(--side)) rotate(90deg);
+}
+
+.manuscript-body {
+  width: min(35.5em, calc(100vw - var(--side) * 2));
+  margin: 0 auto;
+  color: #20201e;
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.38vw, 19px);
+  line-height: 2.08;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.manuscript-body p {
+  margin: 0 0 1.4em;
+}
+
+.manuscript-body p:not([class]) {
+  text-indent: 2em;
+}
+
+.article-loading {
+  color: var(--quiet);
+  text-align: center;
+}
+
+.manuscript-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 0 5.5em;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-align: center;
+}
+
+.manuscript-section:not(:first-child) {
+  margin-top: 8em;
+}
+
+.manuscript-section span {
+  color: var(--quiet);
+  font-family: var(--sans);
+  font-size: 7px;
+  letter-spacing: 0.2em;
+}
+
+.prologue-line {
+  margin-bottom: 0.52em !important;
+  font-size: 0.92em;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.season-mark {
+  margin: 8.5em 0 4.5em !important;
+  color: #10100f;
+  font-size: 1.08em;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.season-mark::before {
+  width: 1px;
+  height: 52px;
+  display: block;
+  margin: 0 auto 32px;
+  background: var(--line);
+  content: "";
+}
+
+.inscription {
+  margin: 4em -4em !important;
+  font-size: 1.05em;
+  letter-spacing: 0.22em;
+  line-height: 2.2;
+  text-align: center;
+}
+
+.closing-poem-title {
+  margin: 6em 0 2em !important;
+  font-size: 1.12em;
+  letter-spacing: 0.42em;
+  text-align: center;
+}
+
+.closing-poem-line {
+  margin: 0 !important;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.article-end {
+  min-height: 82svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px var(--side) 45px;
+  color: #fff;
+  background: var(--dark);
+}
+
+.article-end > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-family: var(--serif);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+}
+
+.article-end h2 {
+  align-self: center;
+  margin: 90px 0;
+  font-family: var(--serif);
+  font-size: clamp(44px, 6.5vw, 94px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+}
+
+.article-end > div {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.journal-line[href] {
+  transition: padding 400ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms ease;
+}
+
+.journal-line[href]:hover,
+.journal-line[href]:focus-visible {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (max-width: 860px) {
+  .article-masthead {
+    min-height: 92svh;
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
+
+  .article-kicker p:last-child,
+  .article-meta p:nth-child(2) {
+    display: none;
+  }
+
+  .article-title {
+    margin: 7vh auto;
+  }
+
+  .article-eyebrow {
+    margin-bottom: 28px;
+  }
+
+  .article-title h1 {
+    font-size: clamp(60px, 18.5vw, 78px);
+    line-height: 1.06;
+  }
+
+  .mobile-title-break {
+    display: inline;
+  }
+
+  .article-deck {
+    margin-top: 42px;
+    font-size: 12px;
+    line-height: 2.2;
+  }
+
+  .article-begin,
+  .manuscript-note {
+    display: none;
+  }
+
+  .manuscript {
+    padding-top: 110px;
+    padding-bottom: 130px;
+  }
+
+  .manuscript-body {
+    width: min(100%, 31em);
+    font-size: 16px;
+    line-height: 2.05;
+    text-align: left;
+  }
+
+  .manuscript-body p {
+    margin-bottom: 1.55em;
+  }
+
+  .manuscript-section {
+    margin-bottom: 4.5em;
+  }
+
+  .manuscript-section:not(:first-child) {
+    margin-top: 7em;
+  }
+
+  .prologue-line {
+    text-align: left;
+  }
+
+  .season-mark {
+    margin-top: 7em !important;
+  }
+
+  .inscription {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    letter-spacing: 0.12em;
+  }
+
+  .closing-poem-line {
+    letter-spacing: 0.12em;
+  }
+
+  .article-end {
+    min-height: 72svh;
+    padding-top: 70px;
+  }
+
+  .article-end h2 {
+    align-self: flex-start;
+  }
+}
