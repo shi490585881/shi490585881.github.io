@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DIM LIGHT / 微明摄影项目。" />
+    <title>Photography — DIM LIGHT</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="projects.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="project-page.js" defer></script>
+  </head>
+  <body class="project-page">
+    <header class="site-header site-header--project">
+      <a class="brand" href="index.html">
+        <strong>DIM LIGHT</strong>
+        <span>微明</span>
+      </a>
+      <a class="index-link" href="index.html#projects">Index ↙</a>
+    </header>
+
+    <main>
+      <section class="project-intro">
+        <p class="project-number" id="project-number"></p>
+        <div>
+          <h1 id="project-title"></h1>
+          <p class="project-en" id="project-en"></p>
+        </div>
+        <div class="project-description">
+          <p id="project-description"></p>
+          <p class="project-details" id="project-details"></p>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-label="摄影作品"></section>
+
+      <nav class="project-nav" aria-label="相邻摄影项目">
+        <a id="previous-project" href="#"></a>
+        <a id="next-project" href="#"></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> DIM LIGHT</p>
+      <p>在微光中，从不会有绝望。</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="关闭大图">Close ×</button>
+      <button class="lightbox-prev" type="button" aria-label="上一张">←</button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="lightbox-next" type="button" aria-label="下一张">→</button>
+    </div>
+  </body>
+</html>

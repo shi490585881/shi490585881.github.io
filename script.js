@@ -3,6 +3,7 @@ const menuPanel = document.querySelector(".menu-panel");
 const menuLinks = document.querySelectorAll(".menu-nav a");
 
 function setMenu(open) {
+  if (!menuButton || !menuPanel) return;
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
   menuPanel.setAttribute("aria-hidden", String(!open));
@@ -10,9 +11,11 @@ function setMenu(open) {
   document.body.classList.toggle("menu-open", open);
 }
 
-menuButton.addEventListener("click", () => {
-  setMenu(menuButton.getAttribute("aria-expanded") !== "true");
-});
+if (menuButton) {
+  menuButton.addEventListener("click", () => {
+    setMenu(menuButton.getAttribute("aria-expanded") !== "true");
+  });
+}
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => setMenu(false));
@@ -33,12 +36,8 @@ if ("IntersectionObserver" in window) {
         currentObserver.unobserve(entry.target);
       });
     },
-    {
-      rootMargin: "0px 0px -7% 0px",
-      threshold: 0.06,
-    },
+    { rootMargin: "0px 0px -6% 0px", threshold: 0.04 },
   );
-
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
