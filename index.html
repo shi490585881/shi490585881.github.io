@@ -8,8 +8,8 @@
       content="DIM LIGHT / 微明 — 在微光中，从不会有绝望。摄影与文字的个人档案。"
     />
     <title>DIM LIGHT / 微明</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=quiet-20260701" />
+    <script src="script.js?v=quiet-20260701" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -17,15 +17,18 @@
         <strong>DIM LIGHT</strong>
         <span>微明</span>
       </a>
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="打开菜单"
-        aria-expanded="false"
-        aria-controls="site-menu"
-      >
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <button class="sound-toggle" type="button" aria-pressed="false">Sound ○</button>
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="打开菜单"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <div class="menu-panel" id="site-menu" aria-hidden="true">
@@ -41,143 +44,176 @@
     </div>
 
     <main id="top">
-      <section class="hero">
-        <p class="hero-kicker reveal">Personal archive / 2025—</p>
-        <div class="hero-lockup reveal">
-          <h1>
-            <span>DIM</span>
-            <span>LIGHT</span>
-          </h1>
-          <div class="hero-cn">
+      <section class="hero-quiet">
+        <p class="hero-index reveal">Personal archive / 2025—</p>
+        <div class="hero-mark reveal">
+          <h1>DIM LIGHT</h1>
+          <div>
             <strong>微明</strong>
             <p>在微光中，从不会有绝望。</p>
           </div>
         </div>
-        <p class="hero-note reveal">Photography and journal from ordinary places.</p>
-        <a class="scroll-cue" href="#projects">Selected projects ↓</a>
+        <p class="hero-place reveal">Chongqing · China</p>
+        <a class="scroll-cue" href="#projects">Photography ↓</a>
       </section>
 
-      <section class="projects" id="projects">
-        <header class="section-heading reveal">
+      <section class="projects-quiet" id="projects">
+        <header class="quiet-heading reveal">
           <p>01 / Photography</p>
           <h2>Selected Projects</h2>
-          <p>在县城、山路、旧街与人的面孔之间，寻找尚未熄灭的东西。</p>
         </header>
 
-        <div class="project-grid">
-          <a class="project-card project-card--wide reveal" href="project.html?id=xiuhu">
-            <figure>
-              <img
-                src="assets/projects/xiuhu/05.webp"
-                alt="秀湖微明，叶片上的蜗牛"
-                loading="lazy"
-              />
-            </figure>
-            <div class="project-meta">
+        <div class="project-index-shell">
+          <div class="project-list reveal">
+            <a
+              class="project-row is-current"
+              href="project.html?id=xiuhu"
+              data-preview="assets/projects/xiuhu/05.webp"
+              data-preview-alt="秀湖微明，叶片上的蜗牛"
+              data-preview-title="秀湖微明 / Dim Light at Xiuhu"
+            >
+              <span>01</span>
               <div>
                 <h3>秀湖微明</h3>
                 <p>Dim Light at Xiuhu</p>
               </div>
-              <p>2025 / 08 images</p>
-            </div>
-          </a>
-
-          <a class="project-card project-card--portrait reveal" href="project.html?id=lost-angel">
-            <figure>
+              <time>2025</time>
               <img
-                src="assets/projects/lost-angel/04.webp"
-                alt="失落天使，县城天台上的人像"
+                class="mobile-project-cover"
+                src="assets/projects/xiuhu/05.webp"
+                alt="秀湖微明，叶片上的蜗牛"
                 loading="lazy"
               />
-            </figure>
-            <div class="project-meta">
+            </a>
+
+            <a
+              class="project-row"
+              href="project.html?id=lost-angel"
+              data-preview="assets/projects/lost-angel/04.webp"
+              data-preview-alt="失落天使，县城天台人像"
+              data-preview-title="失落天使 / Lost Angel"
+            >
+              <span>02</span>
               <div>
                 <h3>失落天使</h3>
                 <p>Lost Angel</p>
               </div>
-              <p>2025 / 10 images</p>
-            </div>
-          </a>
-
-          <a class="project-card reveal" href="project.html?id=android">
-            <figure>
+              <time>2025</time>
               <img
-                src="assets/projects/android/03.webp"
-                alt="仿生人偶面孔与花"
+                class="mobile-project-cover"
+                src="assets/projects/lost-angel/04.webp"
+                alt="失落天使，县城天台人像"
                 loading="lazy"
               />
-            </figure>
-            <div class="project-meta">
+            </a>
+
+            <a
+              class="project-row"
+              href="project.html?id=android"
+              data-preview="assets/projects/android/03.webp"
+              data-preview-alt="仿生人偶面孔与花"
+              data-preview-title="仿生之前 / Before the Android"
+            >
+              <span>03</span>
               <div>
                 <h3>仿生之前</h3>
                 <p>Before the Android</p>
               </div>
-              <p>2026 / 08 images</p>
-            </div>
-          </a>
-
-          <a class="project-card reveal" href="project.html?id=ganzi">
-            <figure>
+              <time>2026</time>
               <img
-                src="assets/projects/ganzi/02.webp"
-                alt="西行甘孜，云雾中的雪山"
+                class="mobile-project-cover"
+                src="assets/projects/android/03.webp"
+                alt="仿生人偶面孔与花"
                 loading="lazy"
               />
-            </figure>
-            <div class="project-meta">
+            </a>
+
+            <a
+              class="project-row"
+              href="project.html?id=ganzi"
+              data-preview="assets/projects/ganzi/02.webp"
+              data-preview-alt="西行甘孜，云雾中的雪山"
+              data-preview-title="西行甘孜 / Westward to Ganzi"
+            >
+              <span>04</span>
               <div>
                 <h3>西行甘孜</h3>
                 <p>Westward to Ganzi</p>
               </div>
-              <p>Field note / 07 images</p>
-            </div>
-          </a>
-
-          <a class="project-card reveal" href="project.html?id=beijing">
-            <figure>
+              <time>2025</time>
               <img
-                src="assets/projects/beijing/01.webp"
-                alt="京城片记，蓝天下的新树昏鸦"
+                class="mobile-project-cover"
+                src="assets/projects/ganzi/02.webp"
+                alt="西行甘孜，云雾中的雪山"
                 loading="lazy"
               />
-            </figure>
-            <div class="project-meta">
+            </a>
+
+            <a
+              class="project-row"
+              href="project.html?id=beijing"
+              data-preview="assets/projects/beijing/01.webp"
+              data-preview-alt="京城片记，新树昏鸦"
+              data-preview-title="京城片记 / Notes from Beijing"
+            >
+              <span>05</span>
               <div>
                 <h3>京城片记</h3>
                 <p>Notes from Beijing</p>
               </div>
-              <p>Field note / 09 images</p>
-            </div>
-          </a>
-
-          <a class="project-card project-card--wide reveal" href="project.html?id=small-town">
-            <figure>
+              <time>2025</time>
               <img
-                src="assets/projects/small-town/06.webp"
-                alt="小城切片，普通空间中的人像"
+                class="mobile-project-cover"
+                src="assets/projects/beijing/01.webp"
+                alt="京城片记，新树昏鸦"
                 loading="lazy"
               />
-            </figure>
-            <div class="project-meta">
+            </a>
+
+            <a
+              class="project-row"
+              href="project.html?id=small-town"
+              data-preview="assets/projects/small-town/06.webp"
+              data-preview-alt="小城切片，普通空间中的人像"
+              data-preview-title="小城切片 / Small Town Studies"
+            >
+              <span>06</span>
               <div>
                 <h3>小城切片</h3>
                 <p>Small Town Studies</p>
               </div>
-              <p>Ongoing / 12 images</p>
+              <time>Ongoing</time>
+              <img
+                class="mobile-project-cover"
+                src="assets/projects/small-town/06.webp"
+                alt="小城切片，普通空间中的人像"
+                loading="lazy"
+              />
+            </a>
+          </div>
+
+          <figure class="project-preview reveal" aria-live="polite">
+            <div class="preview-stage">
+              <img
+                class="preview-image is-visible"
+                src="assets/projects/xiuhu/05.webp"
+                alt="秀湖微明，叶片上的蜗牛"
+              />
+              <img class="preview-image" src="" alt="" />
             </div>
-          </a>
+            <figcaption>秀湖微明 / Dim Light at Xiuhu</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section class="journal" id="journal">
-        <header class="section-heading reveal">
+      <section class="journal-quiet" id="journal">
+        <header class="quiet-heading reveal">
           <p>02 / Journal</p>
           <h2>Words & Notes</h2>
-          <p>关于归途、记忆、摄影，以及继续向前的理由。</p>
         </header>
 
-        <div class="journal-list">
-          <article class="journal-row reveal">
+        <div class="journal-column">
+          <article class="journal-line reveal">
             <time datetime="2026">2026</time>
             <div>
               <h3>何处是归途？</h3>
@@ -185,7 +221,7 @@
             </div>
             <span>Coming soon</span>
           </article>
-          <article class="journal-row reveal">
+          <article class="journal-line reveal">
             <time datetime="2025">2025</time>
             <div>
               <h3>人生不回头</h3>
