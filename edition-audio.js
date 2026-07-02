@@ -1,10 +1,10 @@
 (function () {
   const storageKey = "dim-light-sound";
   const sources = {
-    shutter: ["assets/sound/shutter-01.wav", "assets/sound/shutter-02.wav"],
-    film: ["assets/sound/film-advance-01.wav", "assets/sound/film-advance-02.wav"],
+    shutter: ["assets/sound/interaction-shutter.mp3"],
+    film: ["assets/sound/photo-change.mp3"],
   };
-  const volumes = { shutter: 0.82, film: 0.88 };
+  const volumes = { shutter: 1, film: 1 };
   const pools = { shutter: [], film: [] };
   const positions = { shutter: 0, film: 0 };
   let enabled = localStorage.getItem(storageKey) === "on";
@@ -33,7 +33,7 @@
     audio.pause();
     audio.currentTime = 0;
     audio.volume = volumes[kind];
-    audio.playbackRate = 0.97 + Math.random() * 0.06;
+    audio.playbackRate = 1;
     const playback = audio.play();
     if (playback) {
       playback
