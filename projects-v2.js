@@ -77,7 +77,7 @@ window.DIM_LIGHT_PROJECTS = {
       english: "Small Town Stories",
       year: "Ongoing",
       place: "Bishan, Chongqing",
-      count: 18,
+      count: 45,
       cover: 1,
       description:
         "在不以奇观著称的小城，人物、手艺和日常空间仍在缓慢生长。普通不是限制，而是观看开始的地方。",
